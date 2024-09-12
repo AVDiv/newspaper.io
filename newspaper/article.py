@@ -97,6 +97,9 @@ class Article(object):
         # `tags` are also extracted via parse() from <meta> tags
         self.tags = set()
 
+        # `meta_tags` are extracted via parse() from <meta> tags
+        self.meta_tags = ()
+
         # List of authors who have published the article, via parse()
         self.authors = []
 
@@ -255,6 +258,9 @@ class Article(object):
 
         tags = self.extractor.extract_tags(self.clean_doc)
         self.set_tags(tags)
+
+        meta_tags = self.extractor.get_meta_tags(self.clean_doc)
+        self.set_meta_tags(meta_tags)
 
         meta_keywords = self.extractor.get_meta_keywords(
             self.clean_doc)
@@ -542,6 +548,9 @@ class Article(object):
 
     def set_tags(self, tags):
         self.tags = tags
+    
+    def set_meta_tags(self, meta_tags):
+        self.meta_tags = meta_tags
 
     def set_movies(self, movie_objects):
         """Trim video objects into just urls

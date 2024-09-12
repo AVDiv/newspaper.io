@@ -489,6 +489,11 @@ class ContentExtractor(object):
         """
         return self.get_meta_content(doc, "meta[name=keywords]")
 
+    def get_meta_tags(self, doc):
+        """If the article has meta tags set in the source, use that
+        """
+        return self.get_meta_content(doc, 'meta[property="article:tag"]')
+
     def get_meta_data(self, doc):
         data = defaultdict(dict)
         properties = self.parser.css_select(doc, 'meta')
