@@ -46,13 +46,13 @@ with codecs.open('README.rst', 'r', 'utf-8') as f:
 
 
 setup(
-    name='newspaper3k',
-    version='0.3.0',
+    name='newspaper.io',
+    version='0.0.1',
     description='Simplified python article discovery & extraction.',
     long_description=readme,
-    author='Lucas Ou-Yang',
-    author_email='lucasyangpersonal@gmail.com',
-    url='https://github.com/codelucas/newspaper/',
+    author='Avin Divakara,Lucas Ou-Yang',
+    author_email='[divakaraavin@gmail.com], [lucasyangpersonal@gmail.com]',
+    url='https://github.com/AVDiv/newspaper.io/',
     packages=packages,
     include_package_data=True,
     install_requires=required,

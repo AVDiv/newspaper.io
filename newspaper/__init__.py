@@ -3,9 +3,9 @@
 Wherever smart people work, doors are unlocked. -- Steve Wozniak
 """
 __title__ = 'newspaper'
-__author__ = 'Lucas Ou-Yang'
+__author__ = 'Avin Divakara'
 __license__ = 'MIT'
-__copyright__ = 'Copyright 2014, Lucas Ou-Yang'
+__copyright__ = 'Copyright 2014, Avin Divakara'
 
 from .api import (build, build_article, fulltext, hot, languages,
                   popular_urls, Configuration as Config)

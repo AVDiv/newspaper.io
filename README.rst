@@ -1,32 +1,9 @@
-Newspaper3k: Article scraping & curation
+Newspaper.io: Article scraping & curation
 ========================================
 
-.. image:: https://badge.fury.io/py/newspaper3k.svg
-    :target: http://badge.fury.io/py/newspaper3k.svg
-        :alt: Latest version
+Inspired by `newspaper3k`
 
-.. image:: https://travis-ci.org/codelucas/newspaper.svg
-        :target: http://travis-ci.org/codelucas/newspaper/
-        :alt: Build status
-
-.. image:: https://coveralls.io/repos/github/codelucas/newspaper/badge.svg?branch=master
-        :target: https://coveralls.io/github/codelucas/newspaper
-        :alt: Coverage status
-
-
-Inspired by `requests`_ for its simplicity and powered by `lxml`_ for its speed:
-
-    "Newspaper is an amazing python library for extracting & curating articles."
-    -- `tweeted by`_ Kenneth Reitz, Author of `requests`_
-
-    "Newspaper delivers Instapaper style article extraction." -- `The Changelog`_
-
-.. _`tweeted by`: https://twitter.com/kennethreitz/status/419520678862548992
-.. _`The Changelog`: http://thechangelog.com/newspaper-delivers-instapaper-style-article-extraction/
-
-**Newspaper is a Python3 library**! Or, view our **deprecated and buggy** `Python2 branch`_
-
-.. _`Python2 branch`: https://github.com/codelucas/newspaper/tree/python-2-head
+**Newspaper.io is a Python3 library**!
 
 A Glance:
 ---------
@@ -163,17 +140,6 @@ If you are certain that an *entire* news source is in one language, **go ahead a
     两年双免0手续0利率 科鲁兹掀背金融轻松购_武汉车市_武汉汽
     车网_新浪汽车_新浪网
 
-Support our library
--------------------
-`It takes only one click`_
-
-Docs
-----
-
-Check out `The Docs`_ for full and detailed guides using newspaper.
-
-Interested in adding a new language for us? Refer to: `Docs - Adding new languages <https://newspaper.readthedocs.io/en/latest/user_guide/advanced.html#adding-new-languages>`_
-
 Features
 --------
 
@@ -235,81 +201,13 @@ Features
       vi              Vietnamese
       zh              Chinese
 
-
-Get it now
-----------
-
-Run ✅ ``pip3 install newspaper3k`` ✅
-
-NOT ⛔ ``pip3 install newspaper`` ⛔
-
-On python3 you must install ``newspaper3k``, **not** ``newspaper``. ``newspaper`` is our python2 library.
-Although installing newspaper is simple with `pip <http://www.pip-installer.org/>`_, you will
-run into fixable issues if you are trying to install on ubuntu.
-
-**If you are on Debian / Ubuntu**, install using the following:
-
-- Install ``pip3`` command needed to install ``newspaper3k`` package::
-
-    $ sudo apt-get install python3-pip
-
-- Python development version, needed for Python.h::
-
-    $ sudo apt-get install python-dev
-
-- lxml requirements::
-
-    $ sudo apt-get install libxml2-dev libxslt-dev
-
-- For PIL to recognize .jpg images::
-
-    $ sudo apt-get install libjpeg-dev zlib1g-dev libpng12-dev
-
-NOTE: If you find problem installing ``libpng12-dev``, try installing ``libpng-dev``.
-
-- Download NLP related corpora::
-
-    $ curl https://raw.githubusercontent.com/codelucas/newspaper/master/download_corpora.py | python3
-
-- Install the distribution via pip::
-
-    $ pip3 install newspaper3k
-
-**If you are on OSX**, install using the following, you may use both homebrew or macports:
-
-::
-
-    $ brew install libxml2 libxslt
-
-    $ brew install libtiff libjpeg webp little-cms2
-
-    $ pip3 install newspaper3k
-
-    $ curl https://raw.githubusercontent.com/codelucas/newspaper/master/download_corpora.py | python3
-
-
-**Otherwise**, install with the following:
-
-NOTE: You will still most likely need to install the following libraries via your package manager
-
-- PIL: ``libjpeg-dev`` ``zlib1g-dev`` ``libpng12-dev``
-- lxml: ``libxml2-dev`` ``libxslt-dev``
-- Python Development version: ``python-dev``
-
-::
-
-    $ pip3 install newspaper3k
-
-    $ curl https://raw.githubusercontent.com/codelucas/newspaper/master/download_corpora.py | python3
-
 Donations
 ---------
 
 Your donations are greatly appreciated! They will free me up to work on this project more,
 to take on things like: adding new features, bug-fix support, addressing concerns with the library.
 
-- My PayPal link: `https://www.paypal.me/codelucas`_
-- My `Venmo`_ handle: @Lucas-Ou-Yang
+- Github Sponsor: https://github.com/sponsors/AVDiv
 
 Development
 -----------
@@ -317,7 +215,7 @@ Development
 If you'd like to contribute and hack on the newspaper project, feel free to clone
 a development version of this repository locally::
 
-    git clone git://github.com/codelucas/newspaper.git
+    git clone https://github.com/AVDiv/newspaper.io.git
 
 Once you have a copy of the source, you can embed it in your Python package,
 or install it into your site-packages easily::
@@ -332,39 +230,3 @@ Feel free to give our testing suite a shot, everything is mocked!::
 Planning on tweaking our full-text algorithm? Add the ``fulltext`` parameter::
 
     $ python3 tests/unit_tests.py fulltext
-
-
-Demo
-----
-
-View a working online demo here: http://newspaper-demo.herokuapp.com
-
-This is another working online demo: http://newspaper.chinazt.cc/
-
-LICENSE
--------
-
-Authored and maintained by `Lucas Ou-Yang`_.
-
-`Parse.ly`_ sponsored some work on newspaper, specifically focused on
-automatic extraction.
-
-Newspaper uses a lot of `python-goose's`_ parsing code. View their license `here`_.
-
-Please feel free to `email & contact me`_ if you run into issues or just would like
-to talk about the future of this library and news extraction in general!
-
-.. _`Lucas Ou-Yang`: http://codelucas.com
-.. _`email & contact me`: mailto:lucasyangpersonal@gmail.com
-.. _`python-goose's`: https://github.com/grangier/python-goose
-.. _`here`: https://github.com/codelucas/newspaper/blob/master/GOOSE-LICENSE.txt
-
-.. _`https://www.paypal.me/codelucas`: https://www.paypal.me/codelucas
-.. _`Venmo`: https://www.venmo.com/Lucas-Ou-Yang
-
-.. _`Quickstart guide`: https://newspaper.readthedocs.io/en/latest/
-.. _`The Docs`: https://newspaper.readthedocs.io
-.. _`lxml`: http://lxml.de/
-.. _`requests`: https://github.com/kennethreitz/requests
-.. _`Parse.ly`: http://parse.ly
-.. _`It takes only one click`: https://tracking.gitads.io/?campaign=gitads&repo=newspaper&redirect=gitads.io
